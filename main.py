@@ -26,7 +26,7 @@ async def on_startup():
             url=WEBHOOK_URL
         )
 
-@dp.message_handler(commands=['start'])
+@dp.message(commands=['start'])
 async def start_handler(message: types.Message):
     user_id = message.from_user.id
     user_full_name = message.from_user.full_name
