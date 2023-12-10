@@ -45,19 +45,18 @@ async def main_handler(message: types.Message):
     except:
         logging.info(f'Main: {user_id} {user_full_name} {time.asctime()}. Message: {message}. Error in main_handler')
         await message.reply("Something went wrong...")    
-
+'''
 @app.post(WEBHOOK_PATH)
 async def bot_webhook(update: dict):
     telegram_update = types.Update(**update)
     Dispatcher.set_current(dp)
     Bot.set_current(bot)
     await dp.process_update(telegram_update)
-
+'''
 @app.on_event("shutdown")
 async def on_shutdown():
     await bot.get_session().close()
-
+'''
 @app.get("/")
 def main_web_handler():
     return "Everything ok!"
-'''
