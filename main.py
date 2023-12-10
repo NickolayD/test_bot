@@ -27,7 +27,7 @@ async def lifespan(app: FastAPI):
             url=WEBHOOK_URL
         )
 
-@dp.message(commands=['start'])
+@dp.message()
 async def start_handler(message: types.Message):
     user_id = message.from_user.id
     user_full_name = message.from_user.full_name
