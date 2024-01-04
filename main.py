@@ -7,7 +7,7 @@ import time
 #from skimage import color
 #from skimage.feature import hog
 from fastapi import FastAPI
-from aiogram import Bot, Dispatcher, types, F
+from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message
 from aiogram.filters.command import Command
 from config_reader import config
