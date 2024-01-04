@@ -15,7 +15,7 @@ from config_reader import config
 
 TOKEN = config.bot_token.get_secret_value()
 WEBHOOK_PATH =f"/bot/{TOKEN}"
-RENDER_WEB_SERVICE_NAME = "test_tgbot_service"
+RENDER_WEB_SERVICE_NAME = "test-tgbot-service"
 WEBHOOK_URL = "https://" + RENDER_WEB_SERVICE_NAME + ".onrender.com" + WEBHOOK_PATH
 
 # logging
