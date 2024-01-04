@@ -2,3 +2,4 @@ fastapi
 aiogram
 gunicorn
 uvicorn
+pydantic
