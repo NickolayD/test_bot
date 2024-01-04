@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from aiogram import types, Dispatcher, Bot
 from bot import dp, bot
-from config import TELEGRAM_BOT_TOKEN, NGROK_TUNNEL_URL
+from config import TELEGRAM_BOT_TOKEN, RENDER_WEB_SERVICE_NAME
 
 
 WEBHOOK_PATH = f"/bot/{TELEGRAM_BOT_TOKEN}"
@@ -24,4 +24,5 @@ async def bot_webhook(update: dict):
 
 @app.on_event("shutdown")
 async def on_shutdown():
-    await bot.session.close()
+    session = await bot.get_session()
+    await session.close()
