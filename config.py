@@ -7,7 +7,7 @@ config = dotenv_values(".env")
 
 TELEGRAM_BOT_TOKEN= config['BOT_TOKEN'] 
 
-NGROK_TUNNEL_URL = 'https://238f-88-206-25-29.ngrok-free.app'
+NGROK_TUNNEL_URL = 'https://test-tgbot-service.onrender.com'
 
 START_BOT_TEXT = "Привет! Я - бот для распознавания различных овощей на фотографии."\
     + "Отправь мне фотографию, если хочешь проверить мою работу."
