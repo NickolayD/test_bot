@@ -3,3 +3,4 @@ aiogram
 gunicorn
 uvicorn
 pydantic
+pydantic_settings
