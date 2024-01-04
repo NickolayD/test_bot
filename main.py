@@ -77,7 +77,7 @@ async def bot_webhook(update: dict):
     telegram_update = types.Update(**update)
     #Dispatcher.set_current(dp)
     #dp.set_current()
-    Bot.set_current(bot)
+    #Bot.set_current(bot)
     await dp.process_update(telegram_update)
 
 @app.on_event("shutdown")
