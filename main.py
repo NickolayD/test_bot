@@ -9,7 +9,7 @@ import time
 from fastapi import FastAPI
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message
-from aiogram.filters.command import Command
+#from aiogram.filters.command import Command
 from config_reader import config
 
 
@@ -54,14 +54,14 @@ async def on_startup():
         await bot.set_webhook(url=WEBHOOK_URL)
 
 # хендлер на команду /start
-@dp.message(Command("start"))
+@dp.message_handler(command="start")
 async def cmd_start(message: types.Message):
     user_id = message.from_user.id
     user_full_name = message.from_user.full_name
     logging.info(f'Start: {user_id} {user_full_name} {time.asctime()}. Message: {message}')
     await message.answer("Hello!")
     
-@dp.message()
+@dp.message_handler()
 async def main_handler(message: types.Message):
     try:
         user_id = message.from_user.id
