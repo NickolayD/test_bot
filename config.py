@@ -35,3 +35,4 @@ VEG_DICT = {
 with open("model.pkl", "rb") as file:
     MODEL = pickle.load(file)
 '''
+MODEL = ''
