@@ -23,3 +23,4 @@ typing_extensions==4.5.0
 uvicorn==0.21.1
 yarl==1.8.2
 gunicorn
+pydantic_settings
