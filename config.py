@@ -7,7 +7,7 @@ config = dotenv_values(".env")
 
 TELEGRAM_BOT_TOKEN= config['BOT_TOKEN'] 
 
-RENDER_WEB_SERVICE_NAME = 'https://test-tgbot-service.onrender.com'
+RENDER_WEB_SERVICE_NAME = "https://test-tgbot-service.onrender.com"
 
 START_BOT_TEXT = "Привет! Я - бот для распознавания различных овощей на фотографии."\
     + "Отправь мне фотографию, если хочешь проверить мою работу."
