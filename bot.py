@@ -31,9 +31,9 @@ async def photo_id(message):
         block_norm= 'L2'
     )
     fd = fd.reshape((1, fd.shape[0]))
-    '''
+    
     a = config.MODEL.predict(fd)
-    await message.answer('Овощь на фото - {}'.format(config.VEG_DICT[int(a[0])]))
-    '''
-    await message.answer('photo rendered')
+    await message.answer('Овощ на фото - {}'.format(config.VEG_DICT[int(a[0])]))
+    
+    #await message.answer('photo rendered')
 
