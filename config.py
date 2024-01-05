@@ -1,4 +1,5 @@
 import pickle
+import gdown
 from dotenv import load_dotenv, dotenv_values
 
 
@@ -31,8 +32,9 @@ VEG_DICT = {
     13: 'Редька(Radish)',
     14: 'Томат(Tomato)',
 }
-'''
+
+url = 'https://drive.google.com/uc?id=1o9KJoxkmT062OK7dyTGJafT19LIrcDWd'
+output = 'model.pkl'
+gdown.download(url, output, quiet=False)
 with open("model.pkl", "rb") as file:
     MODEL = pickle.load(file)
-'''
-MODEL = ''
