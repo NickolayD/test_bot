@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 from aiogram import types, Dispatcher, Bot
 from bot import dp, bot
-from config import TELEGRAM_BOT_TOKEN, RENDER_WEB_SERVICE_NAME
+from config import TELEGRAM_BOT_TOKEN, WEB_SERVICE_NAME
 
 
 WEBHOOK_PATH = f"/bot/{TELEGRAM_BOT_TOKEN}"
-WEBHOOK_URL = f"{RENDER_WEB_SERVICE_NAME}{WEBHOOK_PATH}"
+WEBHOOK_URL = f"{WEB_SERVICE_NAME}{WEBHOOK_PATH}"
 
 app = FastAPI()
 
@@ -26,3 +26,7 @@ async def bot_webhook(update: dict):
 async def on_shutdown():
     session = await bot.get_session()
     await session.close()
+    
+@app.get("/")
+async def main_web_handler():
+    return "Everything is OK!"
