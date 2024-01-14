@@ -35,7 +35,7 @@ VEG_DICT = {
 
 # для загрузки pickle-файла с обученной ML моделью
 #url = 'https://drive.google.com/uc?id=14e4XLC96dYte0cF2XT8l9YMBSGb0JrXd'
-url = https://drive.google.com/uc?id=15csxuXKm1MCuZUqASTbge1XY-rci3V8X
+url = 'https://drive.google.com/uc?id=15csxuXKm1MCuZUqASTbge1XY-rci3V8X'
 output = 'LinearSVCBest.pkl'
 gdown.download(url, output, quiet=False)
 with open(output, "rb") as file:
