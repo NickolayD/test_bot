@@ -6,6 +6,10 @@
 Для взаимодействия с с ML-моделью был реализован [web-сервис](http://158.160.85.19:5051/) с помощью библиотеки [FastAPI](https://fastapi.tiangolo.com/).
 Также был реализован [бот](https://web.telegram.org/a/#6944300570) в Telegram с помощью библиотеки [AIOgram](https://docs.aiogram.dev/en/latest/).
 ## Запуск проекта
+Пререквизиты:
+ - Docker;
+ - Python 3.8 или выше (для запуска без Docker).
+Запуск через Docker:
 1. Клонировать репозиторий к себе на локальную машину
    ```
    git clone https://github.com/NickolayD/HSE_Image_Classification.git
