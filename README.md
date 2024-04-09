@@ -15,18 +15,38 @@
    ```
    git clone https://github.com/NickolayD/HSE_Image_Classification.git
    ```
-2. Создайте своего бота с помощью [BotFather](https://web.telegram.org/a/#93372553) и замените значение `BOT_TOKEN` в файле docker-compose.yaml
-   на то, которое будет принадлежать вашему боту;
 2. Перейти в папку скачанного проекта
    ```
    cd HSE_Image_Classification
    ```
+3. Не забудьте создать своего бота с помощью [BotFather](https://web.telegram.org/a/#93372553) и замените значение `BOT_TOKEN` в файле docker-compose.yaml
+   на то, которое будет принадлежать вашему новому созданному боту;
+
 3. Запустить контейнеры через docker-compose
    ```
-   docker-compose up
+   docker compose up
    ```
+   Для запуска проекта в фоновом режиме можно использовать флаг `-d
 
 Запуск без Docker:
-1. Создайте виртуальную среду (опционально, но рекомендуется);
-2. Установите необходимые библиотеки;
-3. 
+1. Создайте виртуальную среду (опционально, но рекомендуется)
+   ```
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+2. Установите необходимые библиотеки
+   ```
+   pip install -r ./application/requirements.txt
+   pip install -r ./bot/requirements.txt
+   ```
+3. В файле application/config.py присвоить переменной `TOKEN` значение, соответствующее вашему телеграм боту
+4. В файле application/config.py изменить значение переменной `_APP_ADRESS` на `http://0.0.0.0:5001` 
+5. Отдельно запустить FastAPI сервис и телеграм бота
+   ```
+   cd application
+   python3 app.py
+   ```
+   ```
+   cd bot
+   python3 bot.py
+   ```
