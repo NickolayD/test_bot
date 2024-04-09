@@ -15,6 +15,8 @@
    ```
    git clone https://github.com/NickolayD/HSE_Image_Classification.git
    ```
+2. Создайте своего бота с помощью [BotFather](https://web.telegram.org/a/#93372553) и замените значение `BOT_TOKEN` в файле docker-compose.yaml
+   на то, которое будет принадлежать вашему боту;
 2. Перейти в папку скачанного проекта
    ```
    cd HSE_Image_Classification
@@ -23,3 +25,8 @@
    ```
    docker-compose up
    ```
+
+Запуск без Docker:
+1. Создайте виртуальную среду (опционально, но рекомендуется);
+2. Установите необходимые библиотеки;
+3. 
